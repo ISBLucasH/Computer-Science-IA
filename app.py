@@ -32,9 +32,6 @@ def show_known_faces():
     title.pack(pady=30)
 
 
-
-
-
 visitor_button = tk.Button(window, text="View the Visitors", command=show_visitors)
 visitor_button.pack(pady=10)
 
