@@ -1,7 +1,13 @@
 import sqlite3
 
+DB_NAME = "Faces.db"
+
+def connect_db():
+    connection = sqlite3.connect(DB_NAME)
+    return connection
+
 def create_known_faces_table():
-    connection = sqlite3.connect('site.db')
+    connection = sqlite3.connect(DB_NAME)
     cursor = connection.cursor()
 
     cursor.execute('''
