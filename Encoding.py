@@ -6,7 +6,7 @@ image_a2 = face_recognition.load_image_file("uploads/a2.jpg")
 image_b1 = face_recognition.load_image_file("uploads/b1.jpg")
 
 start = time.time()
-encodings_a1 = face_recognition.face_encodings(image_a1)[0]
+encodings_a1 = face_recognition.face_encodings(image_a1)
 
 elapsed = time.time() - start
 print("The time it took to encode the image is  ", elapsed, " seconds")
