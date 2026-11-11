@@ -1,6 +1,7 @@
 import tkinter as tk
 from models import create_known_faces_table, get_known_faces
 from PIL import Image, ImageTk
+from tkinter import filedialog
 
 create_known_faces_table()
 
@@ -24,6 +25,8 @@ def scan():
 
 def add_visitor():
     status.config(text="Add a known visitor")
+    file_path = filedialog.askopenfilename(title="Select an image", filetypes=[("Image files", "*.jpg;*.jpeg;*.png")])
+    
 
 def settings():
     new_window = tk.Toplevel(window)
